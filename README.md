@@ -14,4 +14,5 @@ Transactions is a project created for monitoring and reviewing financial transac
   <img src="https://github.com/abychen01/Transactions/blob/812758bb7d752b5d4a24b08d21ac40f2ec6c6114/Transactions%20-%20dev%20workspace.png" width="400">
 3. CSV files are uploaded as files to the Monthly Data folder for ETL. Data can be directly uploaded from the Fabric website or using OneLake File Explorer.
   <img src="https://github.com/abychen01/Transactions/blob/35b27ccf73b930a15ab3fb1114fe97ceb187c14a/Monthly%20Data%20folder.png" width="400">
-4. 
+4. Monthly data ETL Notebook is created inside the Transactions - dev workspace for transforming the data as needed for the report. The Notebook is scheduled to ran mutiple times through out the day to get the latest data. CSV data is listed below:
+<img src="https://github.com/abychen01/Transactions/blob/562994d6ba1182c6d43a77586e1071433cbc4d12/transaction%20sample%20data.png" width="900">   

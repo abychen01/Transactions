@@ -2,19 +2,25 @@
 
 Transactions is a project created for monitoring and reviewing financial transactions. Financial transaction data from the Bank of Nova Scotia is obtained from the instituion website. The report compares the different transactions performed to provide meaningfull financial insight such as unknown charges, high value transactions, comparing previous date period data and more.
 
+Report link - 
+
 #### <ins> Report info </ins>
 
 Page 1: General<br/>
-Contains a summary of the transactions. Shows the amount spend each year, month, quarter and day. Top debit and credit transactions for the time periods mentioned earlier are listed as Multi-row cards. A KPI visual is added to check if the amount debited is larger than amount credited for the selected time period.
+Contains a summary of the transactions. Shows the amount spend each year, month, quarter and day. Top debit and credit transactions for the time periods mentioned earlier are listed as Multi-row cards. A KPI visual is added to check if the amount debited is larger than amount credited for the selected time period.</br>
+<img src="https://github.com/abychen01/Transactions/blob/76e0177cea283cb5eb74a8be5291bb467b5cc5b0/Page%201%20-%20General.png" width="300">
 
 Page 2: Type<br/>
-Debit and Credit transactions are visualized according to the amount. Year, month and account type filters are availabe. This page can be help with finding about spend on different types.
+Debit and Credit transactions are visualized according to the amount. Year, month and account type filters are availabe. This page can be help with finding about spend on different types.</br>
+<img src="https://github.com/abychen01/Transactions/blob/76e0177cea283cb5eb74a8be5291bb467b5cc5b0/Page%202%20-%20Type.png" width="300">
 
 Page 3: Location <br/>
-Map visual available to locate transactions geographically. Amount spend on each city is available as a pie chart.
+Map visual available to locate transactions geographically. Amount spend on each city is available as a pie chart.</br>
+<img src="https://github.com/abychen01/Transactions/blob/76e0177cea283cb5eb74a8be5291bb467b5cc5b0/Page%203%20-%20Location.png" width="300">
 
 Page 4: Detailed report<br/>
-This page is used for reviewing transactions in detail. Filters are available for every need to find unusual activity or to compare transactions with a different time period.
+This page is used for reviewing transactions in detail. Filters are available for every need to find unusual activity or to compare transactions with a different time period.</br>
+<img src="https://github.com/abychen01/Transactions/blob/76e0177cea283cb5eb74a8be5291bb467b5cc5b0/Page%204%20-%20Detailed%20report.png" width="300">
 
 #### <ins> Data Sources </ins>
 1. Dates - Date table, created using Dataflow Gen 2 in Fabric or Power Query using M language in Power BI Desktop app.

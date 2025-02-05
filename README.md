@@ -21,13 +21,12 @@ Map visual available to locate transactions geographically. Amount spend on each
 Page 4: Detailed report<br/>
 This page is used for reviewing transactions in detail. Filters are available for every need to find unusual activity or to compare transactions with a different time period.</br>
 <img src="https://github.com/abychen01/Transactions/blob/76e0177cea283cb5eb74a8be5291bb467b5cc5b0/Page%204%20-%20Detailed%20report.png" width="300">
-
+<br>
 #### <ins> Data Sources </ins>
 1. Dates - Date table, created using Dataflow Gen 2 in Fabric or Power Query using M language in Power BI Desktop app.
 2. Location - Table consisting of Canadian cities and respective data downloaded from https://simplemaps.com/data/canada-cities as CSV file.
   <img src="https://github.com/abychen01/Transactions/blob/35b27ccf73b930a15ab3fb1114fe97ceb187c14a/location%20sample.png" width="900">
 3. Newtransactiondata - Table with the latest transaction data.
-
 
 #### <ins> ETL process </ins>
 1. Financial transaction data (fact table data) from the Bank of Nova Scotia is exported manually (API not avaialable at the moment) from the instituion website as CSV files. At the end of each month two CSV files are generated - one for the debit and one for the credit account.
@@ -39,6 +38,14 @@ This page is used for reviewing transactions in detail. Filters are available fo
 <img src="https://github.com/abychen01/Transactions/blob/562994d6ba1182c6d43a77586e1071433cbc4d12/transaction%20sample%20data.png" width="900">
 5. Once the transformation is completed, the data is saved to newtransactiondata table inside the Lakehouse and CSV files inside the Monthly Data folder is deleted. Monthtly data ETL Data Pipeline is used to automate this process each month and once completed, an email will be send as a confirmation.
 <img src="https://github.com/abychen01/Transactions/blob/b280254b1c69d5c77f75f255a9b20a81e1e3373d/MonthlyDataETL%20Pipeline.png" width="400">   
-6. A new semantic model is created for Power BI report called newTransactionData from the Lakehouse tables. The model contains the dates, newtransactiondata and location table.
+6. A new semantic model is created for Power BI report called newTransactionData from the Lakehouse tables. The model contains the dates, newtransactiondata and location table. The semantic model is setup for large semantic model storage format and query scale out.
+<br/>
 7. Power BI desktop is connected live to the semantic model using DirectLake storage mode.(For publish to web option, the storage mode is changed to import)
 <img src="https://github.com/abychen01/Transactions/blob/4c7e0d05623817eb58cc8fd981ad613610fe2f8b/newTransactionData.png" width="400">
+
+
+#### <ins> Deployment Pipeline </ins>
+Transactions - dev, Transactions - test and Transactions - prod are used as the three workspaces, development, testing and production respectively.
+
+<img src="https://github.com/abychen01/Transactions/blob/c20940a6a6f268c2fa9bdb6b28beb876eed0b213/Deployment%20Pipeline.png" width="400">
+

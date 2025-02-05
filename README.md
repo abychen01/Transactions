@@ -2,7 +2,7 @@
 
 Transactions is a project created for monitoring and reviewing financial transactions. Financial transaction data from the Bank of Nova Scotia is obtained from the instituion website. The report compares the different transactions performed to provide meaningfull financial insight such as unknown charges, high value transactions, comparing previous date period data and more.
 
-Report link - 
+Report link - [Transaction](https://app.powerbi.com/view?r=eyJrIjoiNzUzYTQ3ZjYtMmU2Yy00NTA3LThjMzctNTNlNzcwMzAxZTkyIiwidCI6IjZkYWRkOGM5LTMxMGEtNGE2Ni05MzRhLWQ5MGI1OTk5YjViMCJ9&pageName=ReportSection)
 
 #### <ins> Report info </ins>
 
@@ -40,5 +40,5 @@ This page is used for reviewing transactions in detail. Filters are available fo
 5. Once the transformation is completed, the data is saved to newtransactiondata table inside the Lakehouse and CSV files inside the Monthly Data folder is deleted. Monthtly data ETL Data Pipeline is used to automate this process each month and once completed, an email will be send as a confirmation.
 <img src="https://github.com/abychen01/Transactions/blob/b280254b1c69d5c77f75f255a9b20a81e1e3373d/MonthlyDataETL%20Pipeline.png" width="400">   
 6. A new semantic model is created for Power BI report called newTransactionData from the Lakehouse tables. The model contains the dates, newtransactiondata and location table.
-7. Power BI desktop is connected live to the semantic model using DirectLake storage mode.
+7. Power BI desktop is connected live to the semantic model using DirectLake storage mode.(For publish to web option, the storage mode is changed to import)
 <img src="https://github.com/abychen01/Transactions/blob/4c7e0d05623817eb58cc8fd981ad613610fe2f8b/newTransactionData.png" width="400">
